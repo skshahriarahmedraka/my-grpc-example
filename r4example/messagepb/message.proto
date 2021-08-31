@@ -1,0 +1,19 @@
+syntax ="proto3" ;
+
+option go_package="messagepb";
+
+package Message;
+
+
+service Conversation {
+    rpc Speaking (SpeakRequest) returns (SpeakResponse) {} ; 
+}
+
+
+message SpeakRequest {
+    string my_request =1 ;
+}
+
+message SpeakResponse {
+    string my_response =1 ;
+}

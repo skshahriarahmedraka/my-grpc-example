@@ -1,0 +1,19 @@
+syntax ="proto3" ;
+
+option go_package="messagepb";
+
+package Message;
+
+
+service Conversation {
+    rpc Speaking ( stream LongRequest) returns (stream LongResponse) {} ;
+}
+
+
+message LongRequest {
+    string ClientString =1 ;
+}
+
+message LongResponse {
+    string ServerString =1 ;
+}
